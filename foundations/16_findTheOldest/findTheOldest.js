@@ -1,7 +1,7 @@
 const findTheOldest = function(array) {
     const oldest = array.reduce((oldest, item) => {
         if (!oldest) {
-        return oldest = item;
+        return item;
         }
         
         const oldestEndYear = oldest.yearOfDeath ? oldest.yearOfDeath : new Date().getFullYear();
@@ -10,7 +10,7 @@ const findTheOldest = function(array) {
         if (oldestEndYear - oldest.yearOfBirth > itemEndYear - item.yearOfBirth) {
             return oldest}
 
-    return oldest = item;
+    return item;
     }, {})
 
     return oldest
